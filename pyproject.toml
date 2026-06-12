@@ -1,0 +1,27 @@
+[project]
+name = "vokal-trainer"
+version = "0.1.0"
+description = "Articulatory feedback for Danish & Swedish vowels using F1-F3 formant analysis."
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+]
+
+[project.optional-dependencies]
+# Installed when you start filling in the relevant TODOs — not needed to run
+# the skeleton or the test suite.
+audio = ["praat-parselmouth", "soundfile", "sounddevice"]
+app = ["streamlit", "matplotlib"]
+ml = ["torch", "transformers"]       # HuBERT tiers (later)
+dev = ["pytest"]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
