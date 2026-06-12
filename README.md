@@ -1,1 +1,1 @@
-# vowel-train
+# Vokal trainer
